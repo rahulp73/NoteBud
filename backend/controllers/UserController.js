@@ -44,7 +44,7 @@ export const signup = async (req, res) => {
 export const signin = async (req, res) => {
   const { email, password } = req.body
   if (!email || !password) {
-    res.status(400).json(JSON.stringify({ message: 'Please Add All Fields' }))
+    res.status(400).json({ message: 'Please Add All Fields' })
     return
   }
   try {

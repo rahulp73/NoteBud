@@ -76,7 +76,7 @@ export default function Notes() {
             {notes.map((note) => {
               return <Card key={note.note_id} sx={{ maxWidth: 275, minWidth: 275, borderRadius: 2, '&:hover':{boxShadow:'rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px'} }}>
                 <CardContent sx={{maxHeight:200, overflow:'hidden'}} onClick={()=>{handleOpen(note)}}>
-                  <Typography variant="body2" sx={{whiteSpace:'pre-wrap',wordBreak:'break-all'}}>
+                  <Typography variant="body2" sx={{whiteSpace:'break-spaces'}}>
                     {note.note}
                   </Typography>
                 </CardContent>

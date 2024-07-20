@@ -15,7 +15,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText'
 import { DeleteRounded, LogoutRounded, MenuRounded, PersonRounded, StickyNote2Rounded } from '@mui/icons-material';
-import { Avatar, Card, Collapse, Divider } from '@mui/material';
+import { Avatar, Button, Card, Collapse, Divider } from '@mui/material';
 import logo from '../img/logo.png'
 import CardContent from '@mui/material/CardContent';
 import { NavLink, Outlet } from 'react-router-dom';
@@ -130,7 +130,7 @@ export default function Home({ setAuthToken }) {
             onClick={handleDrawerOpen}
             edge="start"
             sx={{
-              marginRight: 5,
+              marginRight: 2,
               '&:hover': {bgcolor:theme.palette.mode === 'dark' ? '#228B22' : '#81af6a'}
             }}
           >
@@ -140,6 +140,9 @@ export default function Home({ setAuthToken }) {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}>
             NoteBud
           </Typography>
+          <Box>
+            <Button sx={{marginRight:1}}><a href='https://oldnotebud.rahulp.fun' style={{textDecoration: 'none', color: 'inherit'}}>Old NoteBud</a></Button>
+          </Box>
           <Box sx={{ padding: '4px', borderRadius: '50%', "&:hover": { bgcolor: theme.palette.mode === 'dark' ? '#228B22' : '#81af6a' }, transition: 'all 0.3s' }} onClick={() => { setProfile(!profile) }} >
             <Avatar src={avatar} sx={{color: theme.palette.mode === 'dark' ? '#ffffff' : '#000000'}}/>
           </Box>

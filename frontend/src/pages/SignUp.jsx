@@ -33,7 +33,7 @@ export default function SignUp({ setAuthToken }) {
       }
     } catch (error) {
       console.log(error)
-      alert('Sign Up Failed')
+      alert(error.response.data.message)
     }
   };
 
